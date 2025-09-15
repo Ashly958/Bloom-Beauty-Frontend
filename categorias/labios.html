@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos de Labios - Bloom Beauty</title>
+    <link rel="stylesheet" href="styles.categorias.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <div class="logoMain">
+            <a href="../index.html">
+                <img src="../assets/logo-png.png" alt="Logotipo de BLOOM BEAUTY">
+            </a>
+        </div>
+
+        <div class="buscador">
+            <input type="text" placeholder="Buscar">
+            <i class="fa fa-search"></i>
+        </div>
+
+        <div class="carrito" id="carritoBtn">
+            <i class="fa fa-shopping-cart"></i>
+        </div>
+
+        <div class="modo" id="modoBtn">
+            <i class="fa-regular fa-moon"></i>
+        </div>
+
+    </div>
+
+    <!-- Título -->
+    <h1 class="title">✨ Productos de Labios ✨</h1>
+
+    <!-- Grid de productos -->
+    <section class="products">
+        <div class="card">
+            <div class="image"></div>
+            <div class="info">
+                <h2>Máscara de pestañas</h2>
+                <p>Volumen y definición</p>
+                <div class="footer">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="price">$ 45.000</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image"></div>
+            <div class="info">
+                <h2>Delineador líquido</h2>
+                <p>Acabado negro intenso</p>
+                <div class="footer">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="price">$ 30.000</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image"></div>
+            <div class="info">
+                <h2>Sombras compactas</h2>
+                <p>Paleta nude 12 tonos</p>
+                <div class="footer">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="price">$ 65.000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/573219882816" class="whatsapp" target="_blank">
+        <img src="../assets/whatsapp_101778.png" alt="Whatsapp">
+    </a>
+
+    <!-- 🛒 Modal del carrito -->
+    <div class="modal-overlay" id="carritoModal">
+        <div class="modal-carrito">
+            <span class="cerrar" id="cerrarModal">&times;</span>
+            <h2>✨ Carrito de Compras ✨</h2>
+
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="../assets/producto.png" alt="Producto">
+                    <div class="cart-info">
+                        <h4>TÍTULO</h4>
+                        <p>Descripción</p>
+                    </div>
+                    <div class="cart-price">$ 000</div>
+                </div>
+            </div>
+
+            <div class="cart-footer">
+                <p class="total">Total a pagar: $000</p>
+                <button class="pay-btn">pagar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>📍 Cúcuta, Colombia</p>
+        <p>© 2025 - Bloom Beauty</p>
+    </footer>
+
+    <!-- Script compartido -->
+    <script src="../script.js"></script>
+</body>
+
+</html>

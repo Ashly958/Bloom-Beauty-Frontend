@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos de Ojos - Bloom Beauty</title>
+    <link rel="stylesheet" href="styles.categorias.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <div class="logoMain">
+            <a href="../index.html">
+                <img src="../assets/logo-png.png" alt="Logotipo de BLOOM BEAUTY">
+            </a>
+        </div>
+
+        <div class="buscador">
+            <input type="text" placeholder="Buscar">
+            <i class="fa fa-search"></i>
+        </div>
+
+        <div class="carrito" id="carritoBtn">
+            <i class="fa fa-shopping-cart"></i>
+        </div>
+
+        <div class="modo" id="modoBtn">
+            <i class="fa-regular fa-moon"></i>
+        </div>
+    </div>
+
+    <!-- Título -->
+    <h1 class="title">✨ Productos de ojos ✨</h1>
+
+    <div class="products"></div>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/573219882816" class="whatsapp" target="_blank">
+        <img src="../assets/whatsapp_101778.png" alt="Whatsapp">
+    </a>
+
+    <!-- 🛒 Modal del carrito -->
+    <div class="modal-overlay" id="carritoModal">
+        <div class="modal-carrito">
+            <span class="cerrar" id="cerrarModal">&times;</span>
+            <h2>✨ Carrito de Compras ✨</h2>
+
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="assets/producto.png" alt="Producto">
+                    <div class="cart-info">
+                        <h4>TÍTULO</h4>
+                        <p>Descripción</p>
+                    </div>
+                    <div class="cart-price">$ 000</div>
+                </div>
+
+                <div class="cart-item">
+                    <img src="assets/producto.png" alt="Producto">
+                    <div class="cart-info">
+                        <h4>TÍTULO</h4>
+                        <p>Descripción</p>
+                    </div>
+                    <div class="cart-price">$ 000</div>
+                </div>
+            </div>
+
+            <div class="cart-footer">
+                <p class="total">Total a pagar: $000</p>
+                <button class="pay-btn">pagar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>📍 Cúcuta, Colombia</p>
+        <p>© 2025 - Bloom Beauty</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

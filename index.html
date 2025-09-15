@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Bloom Beauty</title>
+</head>
+
+<body>
+    <!-- Pantalla de entrada -->
+    <section class="entrada">
+        <img class="fondo" src="assets/fondo con dorado.png" alt="Fondo mármol">
+        <div class="logo-container">
+            <img class="logo" src="assets/logo-png.png" alt="Logotipo de BLOOM BEAUTY">
+        </div>
+        <div class="scroll-indicador">
+            <i class="fa fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="top-bar">
+
+            <div class="logoMain">
+                <img src="assets/logo-png.png" alt="Logotipo de BLOOM BEAUTY">
+            </div>
+
+            <div class="buscador">
+                <input type="text" placeholder="Buscar">
+                <i class="fa fa-search"></i>
+            </div>
+
+            <!-- Acciones: carrito + modo -->
+            <div class="acciones">
+                <div class="carrito" id="carritoBtn">
+                    <i class="fa fa-shopping-cart"></i>
+                </div>
+                <div class="modo-btn" id="modoBtn">
+                    <i class="fa-regular fa-moon"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <h1>✨ Bienvenida a Bloom Beauty ✨</h1>
+        <br>
+        <p>
+            Tu lugar para descubrir productos de belleza exclusivos que realzan tu esencia.
+            Explora nuestro catálogo, agrega tus favoritos al carrito y disfruta de una experiencia de compra fácil,
+            segura y llena de estilo. <br><br>
+            🌸 Bloom Beauty: donde la elegancia florece en ti.
+        </p>
+
+        <div class="categorias">
+            <div>
+                <a href="./categorias/rostro.html">
+                    <img src="./assets/icono de labios.png" alt="icono de sección de rostro">
+                    <p>ROSTRO</p>
+                </a>
+            </div>
+            <div>
+                <a href="./categorias/labios.html">
+                    <img src="./assets/icono de labios.png" alt="icono de sección de labios">
+                    <p>LABIOS</p>
+                </a>
+            </div>
+            <div>
+                <a href="./categorias/ojos.html">
+                    <img src="./assets/icono de ojos.png" alt="icono de sección de ojos">
+                    <p>OJOS</p>
+                </a>
+            </div>
+            <div>
+                <a href="./categorias/accesorios-de-maquillaje.html">
+                    <img src="./assets/icono de labios.png" alt="icono de sección de maquillaje">
+                    <p>ACCESORIOS DE MAQUILLAJE</p>
+                </a>
+            </div>
+            <div>
+                <a href="./categorias/accesorios-de-cabello.html">
+                    <img src="./assets/icono de labios.png" alt="icono de sección de cabello">
+                    <p>ACCESORIOS DE CABELLO</p>
+                </a>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <!-- Resultados del buscador -->
+        <div class="products resultados-busqueda"></div>
+
+    <footer>
+        <p>📍 Cúcuta, Colombia</p>
+        <p>© 2025 - Bloom Beauty</p>
+    </footer>
+
+
+    <a href="https://wa.me/573219882816" class="whatsapp" target="_blank">
+        <img src="./assets/whatsapp_101778.png" alt="Whatsapp">
+    </a>
+
+    <!-- 🛒 Modal del carrito -->
+    <div class="modal-overlay" id="carritoModal">
+        <div class="modal-carrito">
+            <span class="cerrar" id="cerrarModal">&times;</span>
+            <h2>✨ Carrito de Compras ✨</h2>
+
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="assets/producto.png" alt="Producto">
+                    <div class="cart-info">
+                        <h4>TÍTULO</h4>
+                        <p>Descripción</p>
+                    </div>
+                    <div class="cart-price">$ 000</div>
+                </div>
+
+                <div class="cart-item">
+                    <img src="assets/producto.png" alt="Producto">
+                    <div class="cart-info">
+                        <h4>TÍTULO</h4>
+                        <p>Descripción</p>
+                    </div>
+                    <div class="cart-price">$ 000</div>
+                </div>
+            </div>
+
+            <div class="cart-footer">
+                <p class="total">Total a pagar: $000</p>
+                <button class="pay-btn">pagar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

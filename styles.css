@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+.entrada {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.entrada .fondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    max-width: 400px;
+}
+
+.scroll-indicador {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2rem;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, -10px);
+    }
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    height: 100%;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logoMain img {
+    max-width: 70px;
+    /* un poco más pequeño para móvil */
+}
+
+.buscador {
+    position: relative;
+    flex: 1;
+    max-width: 150vh;
+    /* límite razonable en desktop */
+    width: 100%;
+    /* ocupa todo el ancho posible */
+    margin: 0 20px;
+    /* menos margen en pantallas pequeñas */
+}
+
+.buscador input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    /* espacio para el ícono */
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.buscador i {
+    position: absolute;
+    right: 15px;
+    /* fijo y estable */
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+.buscador input:hover {
+    border-color: goldenrod;
+    box-shadow: 0 0 8px rgba(218, 165, 32, 0.4);
+}
+
+.carrito {
+    position: relative;
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carrito:hover {
+    color: goldenrod;
+    transform: scale(1.1);
+}
+
+
+
+/* 📱 Responsividad */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .buscador {
+        margin: 0;
+        max-width: 100%;
+        /* ocupa todo el ancho en móvil */
+    }
+
+    .logoMain img {
+        max-width: 60px;
+        /* logo más pequeño en móvil */
+    }
+}
+
+
+
+h1 {
+    font-size: 2.8rem;
+    margin: 20px 0;
+    font-family: 'Libre Baskerville', sans-serif;
+}
+
+p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.categorias {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.categorias div {
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.4s ease, box-shadow 0.3s ease; /* 🌟 animación suave */
+}
+
+.categorias div:hover {
+    transform: translateY(-5px) scale(1.08); /* leve crecimiento */
+}
+
+.categorias img:hover {
+    border-color: goldenrod;
+    box-shadow: 0 0 15px rgba(218, 165, 32, 0.4);
+}
+
+.categorias img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    padding: 10px;
+    object-fit: contain;
+}
+
+.categorias p {
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.categorias a {
+    text-decoration: none;
+    /* elimina subrayado del enlace */
+    color: inherit;
+    /* usa el color del padre */
+    display: inline-block;
+    /* asegura que el enlace envuelva bien */
+}
+
+.categorias a:hover p {
+    color: goldenrod;
+}
+
+
+footer {
+    background: #f1f1f1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    /* pone los <p> uno debajo del otro */
+    align-items: center;
+    /* los centra en horizontal */
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9rem;
+    gap: 5px;
+    /* espacio entre los dos <p> */
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 200;
+}
+
+.whatsapp img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp img:hover {
+    transform: scale(1.1);
+}
+
+/* Fondo oscuro con desenfoque */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: none;
+    /* Oculto por defecto */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Caja del carrito */
+.modal-carrito {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 700px;
+    width: 90%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+/* Botón de cerrar */
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #444;
+}
+
+
+/* Lista de productos */
+.cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* ← separación entre productos */
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌑 En modo oscuro */
+body.dark .cart-item {
+    background: #2a2a2a;
+    border: 1px solid #444;
+}
+
+
+.cart-item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.cart-info {
+    flex: 1;
+    text-align: left;
+}
+
+.cart-info h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cart-info p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.cart-price {
+    font-weight: bold;
+    font-size: 1rem;
+    color: goldenrod;
+}
+
+/* Footer */
+.cart-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.total {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.pay-btn {
+    background: #000;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pay-btn:hover {
+    background: goldenrod;
+    color: black;
+}
+
+/* Fondo oscuro del modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    /* oculto por defecto */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* encima de todo */
+}
+
+/* Caja del carrito */
+.modal-carrito {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Botón cerrar */
+.cerrar {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.card {
+    width: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card .image {
+    width: 100%;
+    height: 200px;
+    /* altura fija */
+    overflow: hidden;
+}
+
+.card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* mantiene proporción */
+    display: block;
+}
+
+.card .info {
+    padding: 15px;
+}
+
+.card .info h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.card .info p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.card .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .price {
+    font-weight: bold;
+    color: #222;
+    font-size: 15px;
+}
+
+/* ============================= */
+/* 🛒 Grid de productos con 4 por fila */
+/* ============================= */
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* fuerza 4 columnas */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+    /* centra las cards dentro de cada columna */
+}
+
+/* 🃏 Ajuste de las cards */
+.card {
+    width: 100%;
+    max-width: 250px;
+    /* controla ancho máximo de cada card */
+}
+
+/* 📱 Responsividad */
+@media (max-width: 1024px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        /* tablets → 2 por fila */
+    }
+}
+
+@media (max-width: 600px) {
+    .products {
+        grid-template-columns: 1fr;
+        /* móviles → 1 por fila */
+    }
+}
+
+
+/* ============================= */
+/* 📱 Header optimizado en móvil */
+/* ============================= */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: row;
+        /* mantenemos en fila */
+        gap: 10px;
+        padding: 10px 15px;
+    }
+
+    .logoMain img {
+        max-width: 50px;
+        /* logo más pequeño */
+    }
+
+    .buscador input {
+        padding: 8px 35px 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    .carrito {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* 🌙 Botón modo oscuro */
+.modo-btn {
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin-left: 15px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.modo-btn:hover {
+    color: goldenrod;
+}
+
+/* 🌑 Modo oscuro */
+body.dark {
+    background: #121212;
+    color: #f1f1f1;
+}
+
+body.dark .container {
+    background: #1e1e1e;
+}
+
+body.dark .top-bar {
+    background: #1e1e1e ;
+    border-bottom: 1px solid #333;
+}
+
+body.dark .buscador input {
+    background: #333;
+    border: 1px solid #555;
+    color: #fff;
+}
+
+body.dark .card {
+    background: #222;
+    color: #f1f1f1;
+}
+
+body.dark footer {
+    background: #1a1a1a;
+    color: #ddd;
+}
+
+body.dark p {
+    color: #ddd;
+}
+
+
+/* Contenedor de acciones (carrito + modo oscuro) */
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* separa los íconos */
+}
+
+/* Botón modo oscuro */
+.modo-btn {
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.modo-btn:hover {
+    color: goldenrod;
+}
+
+body.dark .modal-carrito {
+    background: #1e1e1e;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+body.dark .cart-item {
+    background: #2a2a2a;
+    border: 1px solid #444;
+}
+
+/* Contador del carrito */
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #d87ca0;   /* rosadito */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    line-height: 1;
+    min-width: 18px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
